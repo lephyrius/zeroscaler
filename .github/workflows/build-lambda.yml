@@ -24,6 +24,7 @@ jobs:
         run: cargo install cargo-lambda --locked
 
       - name: Build Lambda for ARM64
+        working-directory: boot_fargate_lambda
         run: |
           cargo lambda build --release --arm64
 
