@@ -9,3 +9,4 @@ Cargo.lock
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+boot_fargate_lambda/Cargo.lock
