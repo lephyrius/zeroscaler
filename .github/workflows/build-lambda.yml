@@ -2,7 +2,7 @@ name: Build Boot Fargate Lambda for ARM64
 
 on:
   push:
-    branches: [main]
+    branches: [main,build]
   pull_request:
 
 jobs:
