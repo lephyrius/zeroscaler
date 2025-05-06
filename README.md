@@ -1,9 +1,21 @@
-# Welcome to your CDK TypeScript Construct Library project
+# Zeroscaler CDK Construct
 
-You should explore the contents of this project. It demonstrates a CDK Construct Library that includes a construct (`Zeroscaler`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+This is a CDK Construct Library that scales up Fargate containers based when they are at zero.
 
-The construct defines an interface (`ZeroscalerProps`) to configure the visibility timeout of the queue.
+The construct defines an interface (`ZeroscalerProps`) to configure the Zeroscaler.
+
+## Example
+
+```typescript
+import { Zeroscaler } from './lib';
+
+new Zeroscaler(stack, 'MyZeroscaler', {
+  targetGroupArn: 'arn:aws:elasticloadbalancing:...',
+  fargateTaskArn: 'arn:aws:ecs:...',
+  // Optionally override vpc or cluster
+});
+```
+
 
 ## Useful commands
 
