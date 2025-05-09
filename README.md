@@ -1,7 +1,6 @@
-# Welcome to your CDK TypeScript Construct Library project
+# Zeroscaler CDK TypeScript Construct Library project
 
-You should explore the contents of this project. It demonstrates a CDK Construct Library that includes a construct (`Zeroscaler`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+Construct (`Zeroscaler`) which contains and deploys a lambda that boots up your Fargate application when there is an incoming request. It also monitors 
 
 The construct defines an interface (`ZeroscalerProps`) to configure the visibility timeout of the queue.
 
@@ -10,3 +9,27 @@ The construct defines an interface (`ZeroscalerProps`) to configure the visibili
 * `npm run build`   compile typescript to js
 * `npm run watch`   watch for changes and compile
 * `npm run test`    perform the jest unit tests
+
+## Diagram of the Construct
+
+```mermaid
+flowchart TD
+    A["Client"] L_A_B_0@-- HTTP Request --> B["Zeroscaler"]
+    B -. Register Target .-> C["ELB Target Group"]
+    B L_B_A_0@-- Serve HTML with refresh --> A
+    C -- Health Check --> D["ECS Fargate"]
+    D -- Boot --> E["Your Fargate Application"]
+    A L_A_E_0@-- Refresh when booted --> E
+    E L_E_A_0@-- Response --> A
+    linkStyle 0 stroke:#00C853,fill:none
+    linkStyle 1 stroke:#AA00FF,fill:none
+    linkStyle 2 stroke:#00C853,fill:none
+    linkStyle 3 stroke:#AA00FF,fill:none
+    linkStyle 4 stroke:#AA00FF,fill:none
+    linkStyle 5 stroke:#2962FF,fill:none
+    linkStyle 6 stroke:#2962FF,fill:none
+    L_A_B_0@{ animation: fast } 
+    L_B_A_0@{ animation: fast } 
+    L_A_E_0@{ animation: fast } 
+    L_E_A_0@{ animation: fast }
+```
