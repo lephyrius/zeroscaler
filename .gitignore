@@ -3,7 +3,9 @@
 *.d.ts
 node_modules
 .idea
-
+boot-fargate/target
+boot-fargate-lambda/target
+Cargo.lock
 # CDK asset staging directory
 .cdk.staging
 cdk.out

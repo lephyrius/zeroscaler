@@ -1,0 +1,8 @@
+[package]
+name = "boot-fargate"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aws-config = "1"
+aws-sdk-elasticloadbalancingv2 = "1"
