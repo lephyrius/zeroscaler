@@ -12,7 +12,7 @@ jobs:
       CARGO_TERM_COLOR: always
 
     steps:
-      - name: Checkout code
+      - name: Checkout code for ARM64 build
         uses: actions/checkout@v4
 
       - name: Install Rust (latest stable)
@@ -28,8 +28,8 @@ jobs:
         run: |
           cargo lambda build --release --arm64
 
-      - name: Upload Lambda artifact
+      - name: Upload Boot Fargate Lambda artifact
         uses: actions/upload-artifact@v4
         with:
           name: boot_fargate_lambda
-          path: target/lambda/boot_fargate_lambda/bootstrap
+          path: target/lambda/boot-fargate-lambda/bootstrap
