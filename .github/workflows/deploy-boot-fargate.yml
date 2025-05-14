@@ -35,7 +35,8 @@ jobs:
         with:
           # get git tags info
           fetch-depth: 0
-
+      - name: Debug workspace contents
+        run: ls -R ${{github.workspace}}
       - name: Run publish-action
         uses: tu6ge/publish-action@v0.4.6
         env:
