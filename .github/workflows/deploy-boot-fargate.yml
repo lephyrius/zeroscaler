@@ -1,0 +1,26 @@
+name: Build Boot Fargate crate and distribute to crate.io
+
+on:
+  push:
+    branches: [main,build]
+  pull_request:
+
+jobs:
+  build-lambda:
+    runs-on: ubuntu-latest
+    env:
+      CARGO_TERM_COLOR: always
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Rust
+        uses: actions-hub/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+      - name: Build
+        run: cargo build --release
+      - name: Upload to Crate.io
+        uses: crates-io/upload-action@v2
+        with:
+          token: ${{ secrets.CRATES_IO_TOKEN }}

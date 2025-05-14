@@ -6,3 +6,8 @@ edition = "2024"
 [dependencies]
 aws-config = "1"
 aws-sdk-elasticloadbalancingv2 = "1"
+
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+mockall = "*"
