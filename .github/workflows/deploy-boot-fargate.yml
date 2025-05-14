@@ -24,11 +24,15 @@ jobs:
         run: cargo test --all-features
   build-crate:
     runs-on: ubuntu-latest
+    environment: cargo
     env:
       CARGO_TERM_COLOR: always
     needs: test-crate
     steps:
       - uses: actions/checkout@v4
+        with:
+          # get git tags info
+          fetch-depth: 0
       - name: Cache publish-action bin
         id: cache-publish-action
         uses: actions/cache@v4
