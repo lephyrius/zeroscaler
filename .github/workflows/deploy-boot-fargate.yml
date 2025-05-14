@@ -41,6 +41,10 @@ jobs:
           fetch-depth: 0
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
+      - name: Install Rust (latest stable)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-unknown-linux-gnu
       - name: Run publish-action
         uses: tu6ge/publish-action@v0.4.6
         env:
