@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CARGO_TERM_COLOR: always
-    needs: test-crate
     steps:
       - name: Checkout code for ARM64 build
         uses: actions/checkout@v4
