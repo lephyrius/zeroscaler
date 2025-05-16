@@ -29,7 +29,7 @@ jobs:
         run: cargo install cargo-lambda --locked
 
       - name: Build Lambda for ARM64
-        working-directory: boot-fargate
+        working-directory: boot-fargate-lambda
         run: |
           cargo lambda build --release --arm64
 
@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: boot_fargate_lambda
-          path: target/lambda/boot-fargate-lambda/bootstrap
+          path: ../../boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap
   publish-npm:
     name: Publish on NPM
     runs-on: ubuntu-latest
