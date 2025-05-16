@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: boot_fargate_lambda
-          path: ../../boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap
+          path: boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap
   publish-npm:
     name: Publish on NPM
     runs-on: ubuntu-latest
