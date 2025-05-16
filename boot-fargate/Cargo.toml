@@ -17,4 +17,4 @@ aws-sdk-elasticloadbalancingv2 = "1"
 
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
-mockall = "*"
+mockall = "0.13"
