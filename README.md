@@ -38,3 +38,27 @@ flowchart TD
     L_A_E_0@{ animation: fast } 
     L_E_A_0@{ animation: fast }
 ```
+
+## Installation
+
+```bash
+npm install @zeroscaler/zeroscaler-cdk
+```
+
+## Usage
+
+```typescript
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import { ZeroScaler } from '@zeroscaler/zeroscaler-cdk';
+
+new Zeroscaler(stack, 'MyZeroscaler', {
+    targetGroupArn: 'arn:aws:elasticloadbalancing:...',
+    fargateTaskArn: 'arn:aws:ecs:...',
+    // Optionally override vpc or cluster
+    });
+```
+
+## License
+
+LGPL-2.1-or-later
