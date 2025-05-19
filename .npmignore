@@ -1,5 +1,8 @@
 *.ts
 !*.d.ts
+*.rs
+Cargo.toml
+Cargo.lock
 
 # CDK asset staging directory
 .cdk.staging

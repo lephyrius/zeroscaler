@@ -52,17 +52,39 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: npm install
-      - run: npm test
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zeroscaler-cdk
+          path: dist
+      
   publish-npm:
     name: Publish on NPM
     runs-on: ubuntu-latest
     environment: npm
     needs: node-ci-test
     steps:
-      - uses: actions/checkout@v4
-
+      - name: Checkout zeroscaler-cdk
+        uses: actions/checkout@v4
+      - name: Download Artifact from cargo
+        uses: actions/download-artifact@v4
+        with:
+          name: boot_fargate_lambda
+          path: boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: zeroscaler-cdk
+          path: dist
       - uses: JS-DevTools/npm-publish@v3
         with:
           provenance: true
@@ -74,7 +96,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: node-ci-test
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout zeroscaler-cdk
+        uses: actions/checkout@v4
+      - name: Download Artifact from cargo
+        uses: actions/download-artifact@v4
+        with:
+          name: boot_fargate_lambda
+          path: boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: zeroscaler-cdk
+          path: dist
 
       - uses: JS-DevTools/npm-publish@v3
         with:
