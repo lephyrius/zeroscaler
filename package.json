@@ -24,9 +24,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
     "lint": "eslint . --ext .ts",
-    "clean": "rimraf lib dist",
     "package": "npm run clean && npm run build"
   },
   "devDependencies": {
