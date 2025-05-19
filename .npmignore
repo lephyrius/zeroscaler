@@ -3,6 +3,8 @@
 *.rs
 Cargo.toml
 Cargo.lock
+.github
+.gitattributes
 
 # CDK asset staging directory
 .cdk.staging

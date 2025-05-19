@@ -10,6 +10,12 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "keywords": ["aws", "cdk", "zeroscaler", "fargate", "lambda"],
+  "author": "Jonas Innala",
+  "license": "LGPL-2.1-or-later",
+  "readme": "README.md",
+  "files": [
+    "boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap"
+  ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -25,7 +31,7 @@
     "typescript": "~5.8"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "2.190",
-    "constructs": "^10.0"
+    "aws-cdk-lib": "^2",
+    "constructs": "^10"
   }
 }
