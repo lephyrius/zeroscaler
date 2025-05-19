@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zeroscaler-cdk
-          path: dist
+          path: lib
       
   publish-npm:
     name: Publish on NPM
@@ -84,7 +84,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: zeroscaler-cdk
-          path: dist
+          path: lib
       - uses: JS-DevTools/npm-publish@v3
         with:
           provenance: true
@@ -107,7 +107,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: zeroscaler-cdk
-          path: dist
+          path: lib
 
       - uses: JS-DevTools/npm-publish@v3
         with:

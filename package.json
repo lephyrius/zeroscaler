@@ -1,5 +1,11 @@
 {
   "name": "@zeroscaler/zeroscaler-cdk",
+  "description": "AWS CDK constructs for ZeroScaler.io",
+  "website": "https://zeroscaler.io",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lephyrius/zeroscaler"
+    },
   "version": "0.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
