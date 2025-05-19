@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-lambda:
+    name: Build Boot Fargate Lambda for ARM64
     runs-on: ubuntu-latest
     env:
       CARGO_TERM_COLOR: always
@@ -39,7 +40,7 @@ jobs:
           name: boot_fargate_lambda
           path: boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap
   node-ci-test:
-    name: Publish on NPM
+    name: Runs Node.js tests
     runs-on: ubuntu-latest
     needs: build-lambda
     steps:
@@ -53,7 +54,6 @@ jobs:
 
       - run: npm install
       - run: npm test
-      - run: npm run ci
   publish-npm:
     name: Publish on NPM
     runs-on: ubuntu-latest
