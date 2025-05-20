@@ -87,7 +87,6 @@ jobs:
         with:
           provenance: true
           token: ${{ secrets.NPM_TOKEN }}
-          dry-run: true
 
   publish-gpr:
     name: Publish on GPR
@@ -112,4 +111,3 @@ jobs:
           provenance: true
           token: ${{ secrets.GITHUB_TOKEN }}
           registry: "https://npm.pkg.github.com"
-          dry-run: true
