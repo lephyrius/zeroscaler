@@ -5,6 +5,7 @@ Cargo.toml
 Cargo.lock
 .github
 .gitattributes
+*.ts
 
 # CDK asset staging directory
 .cdk.staging
