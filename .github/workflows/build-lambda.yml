@@ -49,7 +49,7 @@ jobs:
       - name: Set up Node.js for NPM
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: latest
           cache: 'npm'
 
       - name: Install dependencies
@@ -63,12 +63,6 @@ jobs:
 
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: zeroscaler-cdk
-          path: lib
       
   publish-npm:
     name: Publish on NPM
@@ -82,11 +76,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: boot_fargate_lambda
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: zeroscaler-cdk
-          path: lib
 
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
@@ -107,11 +96,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: boot_fargate_lambda
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
+      - name: Set up Node.js for NPM
+        uses: actions/setup-node@v4
         with:
-          name: zeroscaler-cdk
-          path: lib
+          node-version: latest
+          cache: 'npm'
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
       - uses: JS-DevTools/npm-publish@v3
