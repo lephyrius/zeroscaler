@@ -15,9 +15,10 @@
   "readme": "README.md",
   "files": [
     "lib",
-    "boot-fargate-lambda/target/lambda/boot-fargate-lambda/bootstrap",
+    "bootstrap",
     "LICENSE",
     "README.md"
+    
   ],
   "scripts": {
     "build": "tsc",
