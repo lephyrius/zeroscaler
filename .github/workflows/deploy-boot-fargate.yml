@@ -8,9 +8,10 @@ on:
 jobs:
   test-crate:
     runs-on: ubuntu-latest
+    name: Test boot-fargate crate
     env:
       CARGO_TERM_COLOR: always
-
+    
     steps:
       - name: Checkout code for ARM64 build
         uses: actions/checkout@v4
@@ -31,6 +32,7 @@ jobs:
   build-crate:
     runs-on: ubuntu-latest
     environment: cargo
+    name: Build and publish boot-fargate crate
     env:
       CARGO_TERM_COLOR: always
     needs: test-crate
