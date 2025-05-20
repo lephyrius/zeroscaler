@@ -81,6 +81,8 @@ jobs:
         with:
           node-version: latest
           cache: 'npm'
+      - name: Build
+        run: npm run build
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
       - uses: JS-DevTools/npm-publish@v3
@@ -105,6 +107,8 @@ jobs:
         with:
           node-version: latest
           cache: 'npm'
+      - name: Build
+        run: npm run build
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
       - uses: JS-DevTools/npm-publish@v3
