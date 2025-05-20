@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message: "chore: update dependencies for node packages"
+  - package-ecosystem: "cargo"
+    directory: "boot-fargate"
+    schedule:
+      interval: "daily"
+    commit-message: "chore: update dependencies for rust packages"
+  - package-ecosystem: "cargo"
+    directory: "boot-fargate-lambda"
+    schedule:
+      interval: "daily"
+    commit-message: "chore: update dependencies for rust packages"

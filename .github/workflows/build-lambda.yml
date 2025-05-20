@@ -83,8 +83,6 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Debug workspace contents
-        run: ls -R ${{github.workspace}}
       - uses: JS-DevTools/npm-publish@v3
         with:
           provenance: true
@@ -109,8 +107,6 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Debug workspace contents
-        run: ls -R ${{github.workspace}}
       - uses: JS-DevTools/npm-publish@v3
         with:
           provenance: true
