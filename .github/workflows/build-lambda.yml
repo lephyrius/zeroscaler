@@ -108,6 +108,7 @@ jobs:
         with:
           node-version: latest
           cache: 'npm'
+          registry-url: https://npm.pkg.github.com/
       - name: Install dependencies
         run: npm install
       - uses: JS-DevTools/npm-publish@v3
