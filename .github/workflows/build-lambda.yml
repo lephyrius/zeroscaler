@@ -85,8 +85,9 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - uses: JS-DevTools/npm-publish@v3
+      - if: github.ref == 'refs/heads/main'
+        name: Publish
+        uses: JS-DevTools/npm-publish@v3
         with:
           provenance: true
           token: ${{ secrets.NPM_TOKEN }}
-          dry-run: ${{ github.event_name != 'pull_request' }}
