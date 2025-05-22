@@ -1,5 +1,5 @@
 {
-  "name": "@zeroscaler/zeroscaler-cdk",
+  "name": "@zeroscale/zeroscaler-cdk",
   "description": "AWS CDK constructs for ZeroScaler.io",
   "website": "https://zeroscaler.io",
   "repository": {
