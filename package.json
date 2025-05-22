@@ -1,7 +1,8 @@
 {
-  "name": "@zeroscale/zeroscaler-cdk",
+  "name": "@zeroscaler/zeroscaler-cdk",
   "description": "AWS CDK constructs for ZeroScaler.io",
   "website": "https://zeroscaler.io",
+  "homepage": "https://zeroscaler.io",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lephyrius/zeroscaler.git"
