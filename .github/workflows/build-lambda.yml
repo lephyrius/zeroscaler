@@ -89,30 +89,3 @@ jobs:
         with:
           provenance: true
           token: ${{ secrets.NPM_TOKEN }}
-
-  publish-gpr:
-    name: Publish on GPR
-    runs-on: ubuntu-latest
-    needs: node-ci-test
-    permissions:
-      id-token: write
-    steps:
-      - name: Checkout zeroscaler-cdk
-        uses: actions/checkout@v4
-      - name: Download Artifact from cargo
-        uses: actions/download-artifact@v4
-        with:
-          name: boot_fargate_lambda
-      - name: Set up Node.js for NPM
-        uses: actions/setup-node@v4
-        with:
-          node-version: latest
-          cache: 'npm'
-          registry-url: https://npm.pkg.github.com/
-      - name: Install dependencies
-        run: npm install
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          provenance: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          registry: "https://npm.pkg.github.com"
