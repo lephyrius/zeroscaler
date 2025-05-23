@@ -11,6 +11,9 @@ Cargo.lock
 cdk.out
 boot_fargate_lambda/Cargo.lock
 
+# Is managed by jsii, but we need it for the lambda build
+tsconfig.json 
+
 # Build
 lib/
 dist/

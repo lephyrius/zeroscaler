@@ -7,11 +7,11 @@ import * as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import * as iam from 'aws-cdk-lib/aws-iam';
 
 export interface ZeroscalerProps {
-  vpc: ec2.IVpc;
-  cluster: ecs.ICluster;
-  targetGroupArn: string;
-  fargateTaskArn: string;
-  refreshDelay?: string;
+  readonly vpc: ec2.IVpc;
+  readonly cluster: ecs.ICluster;
+  readonly targetGroupArn: string;
+  readonly fargateTaskArn: string;
+  readonly refreshDelay?: string;
 }
 
 export class Zeroscaler extends Construct {

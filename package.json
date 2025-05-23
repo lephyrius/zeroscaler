@@ -8,8 +8,8 @@
     "url": "git+https://github.com/lephyrius/zeroscaler.git"
   },
   "version": "0.1.2",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "zeroscaler/lib/index.js",
+  "types": "zeroscaler/lib/index.d.ts",
   "keywords": [
     "aws",
     "cdk",
@@ -37,8 +37,8 @@
   "devDependencies": {
     "@types/jest": "^29.5",
     "@types/node": "22.7",
-    "aws-cdk-lib": "2.190",
-    "constructs": "^10.0",
+    "aws-cdk-lib": "^2",
+    "constructs": "^10",
     "jest": "^29.7",
     "jsii": "^5.8",
     "jsii-pacmak": "^1.11",
@@ -56,35 +56,32 @@
     "access": "public"
   },
   "jsii": {
-    "stability": "stable",
-    "types": "lib/index.d.ts",
-    "jsii": {
-      "versionFormat": "short",
-      "targets": {
-        "java": {
-          "package": "io.zeroscaler",
-          "maven": {
-            "groupId": "io.zeroscaler",
-            "artifactId": "cdk"
-          }
-        },
-        "python": {
-          "distName": "zeroscaler",
-          "module": "cdk"
-        },
-        "dotnet": {
-          "namespace": "ZeroScaler",
-          "packageId": "ZeroScaler",
-          "iconUrl": "https://zeroscaler.io/favicon.svg"
-        },
-        "go": {
-          "packageName": "zeroscaler",
-          "moduleName": "lephyrius/zeroscaler"
+    "versionFormat": "short",
+    "targets": {
+      "java": {
+        "package": "io.zeroscaler",
+        "maven": {
+          "groupId": "io.zeroscaler",
+          "artifactId": "cdk"
         }
       },
-      "tsc": {
-        "outDir": "dist"
+      "python": {
+        "distName": "zeroscaler",
+        "module": "cdk"
+      },
+      "dotnet": {
+        "namespace": "ZeroScaler",
+        "packageId": "ZeroScalerCDK",
+        "iconUrl": "https://zeroscaler.io/favicon.svg"
+      },
+      "go": {
+        "packageName": "zeroscaler",
+        "moduleName": "zeroscalercdk"
       }
+    },
+    "tsc": {
+      "outDir": "dist"
     }
-  }
+  },
+  "stability": "stable"
 }
