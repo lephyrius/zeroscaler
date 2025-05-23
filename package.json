@@ -28,11 +28,11 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "jsii",
+    "watch": "jsii --watch",
     "test": "jest",
     "prepare": "npm run build",
-    "package": "npm run clean && npm run build"
+    "package": "jsii-pacmak"
   },
   "devDependencies": {
     "@types/jest": "^29.5",
@@ -40,9 +40,10 @@
     "aws-cdk-lib": "2.190",
     "constructs": "^10.0",
     "jest": "^29.7",
+    "jsii": "^5.8",
+    "jsii-pacmak": "^1.11",
     "ts-jest": "^29.2",
-    "typescript": "~5.8",
-    "publib": "^0.2"
+    "typescript": "~5.8"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2",
