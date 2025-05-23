@@ -73,7 +73,7 @@
       "dotnet": {
         "namespace": "ZeroScaler",
         "packageId": "ZeroScalerCDK",
-        "iconUrl": "https://zeroscaler.io/favicon.svg"
+        "iconUrl": "https://zeroscaler.io/favicon.png"
       },
       "go": {
         "packageName": "zeroscaler",
