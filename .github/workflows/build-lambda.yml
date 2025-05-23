@@ -63,7 +63,13 @@ jobs:
 
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
-      
+      - name: Package
+        run: npm run package
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: zeroscaler-cdk
+          path: dist
   publish-npm:
     name: Publish on NPM
     runs-on: ubuntu-latest
@@ -74,10 +80,14 @@ jobs:
     steps:
       - name: Checkout zeroscaler-cdk
         uses: actions/checkout@v4
-      - name: Download Artifact from cargo
+      - name: Download Artifact for lambda build
         uses: actions/download-artifact@v4
         with:
           name: boot_fargate_lambda
+      - name: Download Artifact for jsii build
+        uses: actions/download-artifact@v4
+        with:
+          name: zeroscaler-cdk
       - name: Set up Node.js for NPM
         uses: actions/setup-node@v4
         with:
