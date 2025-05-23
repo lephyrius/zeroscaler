@@ -85,9 +85,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - if: github.ref == 'refs/heads/main'
-        name: Publish
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          provenance: true
-          token: ${{ secrets.NPM_TOKEN }}
+      - if: github.ref == 'refs/heads/main' || true
+        name: Publish to NPM
+        run: npm run publib-npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

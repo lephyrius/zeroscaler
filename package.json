@@ -13,12 +13,13 @@
   "keywords": [
     "aws",
     "cdk",
+    "awscdk",
     "zeroscaler",
     "fargate",
     "lambda"
   ],
   "author": "Jonas Innala",
-  "license": "LGPL-2.1-or-later",
+  "license": "MPL-2.0",
   "readme": "README.md",
   "files": [
     "lib",
@@ -40,7 +41,8 @@
     "constructs": "^10.0",
     "jest": "^29.7",
     "ts-jest": "^29.2",
-    "typescript": "~5.8"
+    "typescript": "~5.8",
+    "publib": "^0.2"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2",
@@ -51,5 +53,37 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "jsii": {
+    "stability": "stable",
+    "types": "lib/index.d.ts",
+    "jsii": {
+      "versionFormat": "short",
+      "targets": {
+        "java": {
+          "package": "io.zeroscaler",
+          "maven": {
+            "groupId": "io.zeroscaler",
+            "artifactId": "cdk"
+          }
+        },
+        "python": {
+          "distName": "zeroscaler",
+          "module": "cdk"
+        },
+        "dotnet": {
+          "namespace": "ZeroScaler",
+          "packageId": "ZeroScaler",
+          "iconUrl": "https://zeroscaler.io/favicon.svg"
+        },
+        "go": {
+          "packageName": "zeroscaler",
+          "moduleName": "lephyrius/zeroscaler"
+        }
+      },
+      "tsc": {
+        "outDir": "dist"
+      }
+    }
   }
 }
