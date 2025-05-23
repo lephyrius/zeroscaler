@@ -95,3 +95,5 @@ jobs:
         run: npx publib
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
