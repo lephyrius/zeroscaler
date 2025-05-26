@@ -63,7 +63,7 @@
         "package": "io.zeroscaler",
         "maven": {
           "groupId": "io.zeroscaler",
-          "artifactId": "cdk"
+          "artifactId": "zeroscaler-cdk"
         }
       },
       "python": {
