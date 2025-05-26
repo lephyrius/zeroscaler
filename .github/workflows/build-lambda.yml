@@ -100,5 +100,5 @@ jobs:
           MAVEN_STAGING_PROFILE_ID: ${{ secrets.MAVEN_STAGING_PROFILE_ID }}
           MAVEN_GPG_PRIVATE_KEY_PASSPHRASE: ${{ secrets.MAVEN_GPG_PRIVATE_KEY_PASSPHRASE }}
           MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-          MAVEN_ENDPOINT: https://central.sonatype.com
+          MAVEN_ENDPOINT: https://s01.oss.sonatype.org
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
