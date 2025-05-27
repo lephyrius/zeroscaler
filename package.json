@@ -63,7 +63,7 @@
       "java": {
         "package": "io.zeroscaler",
         "maven": {
-          "groupId": "io.zeroscaler",
+          "groupId": "io.zeroscaler.cdk",
           "artifactId": "zeroscaler-cdk"
         }
       },
