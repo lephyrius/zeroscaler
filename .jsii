@@ -3963,7 +3963,7 @@
     "stability": "stable"
   },
   "homepage": "https://zeroscaler.io",
-  "jsiiVersion": "5.8.9",
+  "jsiiVersion": "5.8.10",
   "keywords": [
     "aws",
     "cdk",
@@ -3991,7 +3991,7 @@
   "schema": "jsii/0.10.0",
   "targets": {
     "dotnet": {
-      "iconUrl": "https://zeroscaler.io/favicon.svg",
+      "iconUrl": "https://zeroscaler.io/favicon.png",
       "namespace": "ZeroScaler",
       "packageId": "ZeroScalerCDK"
     },
@@ -4001,7 +4001,7 @@
     },
     "java": {
       "maven": {
-        "artifactId": "cdk",
+        "artifactId": "zeroscaler-cdk",
         "groupId": "io.zeroscaler"
       },
       "package": "io.zeroscaler"
@@ -4154,5 +4154,5 @@
     }
   },
   "version": "0.1.2",
-  "fingerprint": "lQPZNZz07KPJjWNy/LDh7lKkoQheHAY45S0v891WWYU="
+  "fingerprint": "YzQNgJ26Izd5yQy1EiFgdheFdSvYpwq28NQECaVKuic="
 }

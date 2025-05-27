@@ -43,7 +43,8 @@
     "jsii": "^5.8",
     "jsii-pacmak": "^1",
     "ts-jest": "^29.2",
-    "typescript": "~5.8"
+    "typescript": "~5.8",
+    "publib": "^0.2.989"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2",

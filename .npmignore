@@ -34,3 +34,8 @@ jest.config.js
 .eslintrc.js
 .prettierrc
 tsconfig.json
+
+
+# Include .jsii and .jsii.gz
+!.jsii
+!.jsii.gz
