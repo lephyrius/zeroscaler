@@ -92,6 +92,7 @@ jobs:
         run: ls -R ${{github.workspace}}
       - if: github.ref == 'refs/heads/main' || true
         name: Publish to NPM
+        uses: s4u/setup-maven-action@latest
         run: npx publib
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
