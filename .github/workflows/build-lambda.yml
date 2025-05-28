@@ -93,6 +93,11 @@ jobs:
         run: npm run package
       - name: Debug workspace contents
         run: ls -R ${{github.workspace}}
+      - name: Setup GitHub deploy key
+        env:
+          GITHUB_DEPLOY_KEY: ${{ secrets.GO_DEPLOY_KEY }}
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: ssh-agent -a ${SSH_AUTH_SOCK} && ssh-add - <<< "${GITHUB_DEPLOY_KEY}"
       - if: github.ref == 'refs/heads/main' || true
         name: Publish to NPM
         run: npx publib
