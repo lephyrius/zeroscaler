@@ -1,6 +1,41 @@
 *.ts
 !*.d.ts
+*.rs
+Cargo.toml
+Cargo.lock
+.github
+.gitattributes
+*.ts
 
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# Development
+.git
+.github
+.vscode
+.idea
+*.log
+*.tgz
+
+# Build
+dist
+coverage
+.nyc_output
+
+# Test
+__tests__
+*.test.ts
+*.spec.ts
+jest.config.js
+
+# Config
+.eslintrc.js
+.prettierrc
+tsconfig.json
+
+
+# Include .jsii and .jsii.gz
+!.jsii
+!.jsii.gz

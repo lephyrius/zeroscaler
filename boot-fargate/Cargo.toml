@@ -1,8 +1,21 @@
 [package]
-name = "boot-fargate"
-version = "0.1.0"
-edition = "2024"
+name = "zeroscaler-boot-fargate"
+version = "0.1.1"
+edition = "2021"
+license = "MPL-2.0"
+license-file = "../LICENSE"
+description = "A library to boot a Fargate task using AWS SDK for Rust"
+homepage = "https://zeroscaler.io"
+rust-version = "1.87"
+repository = "https://github.com/lephyrius/zeroscaler"
+keywords = ["aws", "fargate", "lambda", "rust", "sdk"]
+readme = "../README.md"
 
 [dependencies]
 aws-config = "1"
 aws-sdk-elasticloadbalancingv2 = "1"
+
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+mockall = "0.13"

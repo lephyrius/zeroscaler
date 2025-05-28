@@ -1,11 +1,13 @@
 # Zeroscaler CDK TypeScript Construct Library project
 
-[![npm version](https://badge.fury.io/js/zeroscaler.svg)](https://badge.fury.io/js/zeroscaler)
+[![npm version](https://badge.fury.io/js/@zeroscaler%2Fzeroscaler-cdk.svg)](https://badge.fury.io/js/@zeroscaler%2Fzeroscaler-cdk)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue.svg)](https://www.typescriptlang.org/)
 [![AWS CDK](https://img.shields.io/badge/AWS%20CDK-2.0+-orange.svg)](https://aws.amazon.com/cdk/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-Construct (`Zeroscaler`) which contains and deploys a lambda that boots up your Fargate application when there is an incoming request. It also monitors 
+
+Construct (`Zeroscaler`) which contains and deploys a lambda that boots up your Fargate application when there is an incoming request. It also monitors
 
 The construct defines an interface (`ZeroscalerProps`) to configure the visibility timeout of the queue.
 
@@ -38,3 +40,27 @@ flowchart TD
     L_A_E_0@{ animation: fast } 
     L_E_A_0@{ animation: fast }
 ```
+
+## Installation
+
+```bash
+npm install @zeroscaler/zeroscaler-cdk
+```
+
+## Usage
+
+```typescript
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import { ZeroScaler } from '@zeroscaler/zeroscaler-cdk';
+
+new Zeroscaler(stack, 'MyZeroscaler', {
+    targetGroupArn: 'arn:aws:elasticloadbalancing:...',
+    fargateTaskArn: 'arn:aws:ecs:...',
+    // Optionally override vpc or cluster
+    });
+```
+
+## License
+
+MPL-2.0

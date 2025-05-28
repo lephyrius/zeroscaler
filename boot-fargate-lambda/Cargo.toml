@@ -1,9 +1,15 @@
 [package]
 name = "boot-fargate-lambda"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 lambda_http = "0.14"
 tokio = { version = "1", features = ["macros"] }
-boot-fargate = { path = "../boot-fargate" }
+zeroscaler-boot-fargate = { version = "*" }
+
+
+[profile.release]
+lto = true
+strip = true
+opt-level = "z"

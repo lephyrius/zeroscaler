@@ -1,5 +1,5 @@
 use lambda_http::{run, service_fn, tracing, Error};
-use boot_fargate::scale_containers;
+use zeroscaler_boot_fargate::scale_containers;
 
 
 

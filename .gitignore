@@ -1,7 +1,7 @@
 *.js
 !jest.config.js
 *.d.ts
-node_modules
+node_modules/
 .idea
 boot-fargate/target
 boot-fargate-lambda/target
@@ -9,3 +9,27 @@ Cargo.lock
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+boot_fargate_lambda/Cargo.lock
+
+# Is managed by jsii, but we need it for the lambda build
+tsconfig.json 
+
+# Build
+lib/
+dist/
+*.js.map
+
+# Test
+coverage/
+.nyc_output/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Package
+*.tgz

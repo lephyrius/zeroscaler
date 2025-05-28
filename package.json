@@ -1,24 +1,89 @@
 {
-  "name": "zeroscaler",
-  "version": "0.1.0",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "name": "@zeroscaler/zeroscaler-cdk",
+  "description": "AWS CDK constructs for ZeroScaler.io",
+  "website": "https://zeroscaler.io",
+  "homepage": "https://zeroscaler.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lephyrius/zeroscaler.git"
+  },
+  "version": "0.1.2",
+  "main": "zeroscaler/lib/index.js",
+  "types": "zeroscaler/lib/index.d.ts",
+  "keywords": [
+    "aws",
+    "cdk",
+    "awscdk",
+    "zeroscaler",
+    "fargate",
+    "lambda"
+  ],
+  "author": "Jonas Innala",
+  "license": "MPL-2.0",
+  "readme": "README.md",
+  "files": [
+    "lib",
+    "bootstrap",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest"
+    "build": "jsii",
+    "watch": "jsii --watch",
+    "test": "jest",
+    "prepare": "npm run build",
+    "package": "jsii-pacmak"
   },
   "devDependencies": {
     "@types/jest": "^29.5",
     "@types/node": "22.7",
-    "aws-cdk-lib": "2.190",
-    "constructs": "^10.0",
+    "aws-cdk-lib": "^2",
+    "constructs": "^10",
     "jest": "^29.7",
+    "jsii": "^5.8",
+    "jsii-pacmak": "^1",
     "ts-jest": "^29.2",
-    "typescript": "~5.8"
+    "typescript": "~5.8",
+    "publib": "^0.2.989"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "2.190",
-    "constructs": "^10.0"
-  }
+    "aws-cdk-lib": "^2",
+    "constructs": "^10"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "short",
+    "targets": {
+      "java": {
+        "package": "io.zeroscaler",
+        "maven": {
+          "groupId": "io.zeroscaler.cdk",
+          "artifactId": "zeroscaler-cdk"
+        }
+      },
+      "python": {
+        "distName": "zeroscaler",
+        "module": "cdk"
+      },
+      "dotnet": {
+        "namespace": "ZeroScaler",
+        "packageId": "ZeroScalerCDK",
+        "iconUrl": "https://zeroscaler.io/favicon.png"
+      },
+      "go": {
+        "packageName": "zeroscaler",
+        "moduleName": "github.com/lephyrius/zeroscaler"
+      }
+    },
+    "tsc": {
+      "outDir": "dist"
+    }
+  },
+  "stability": "stable"
 }
