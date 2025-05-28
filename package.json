@@ -78,7 +78,7 @@
       },
       "go": {
         "packageName": "zeroscaler",
-        "moduleName": "https://github.com/lephyrius"
+        "moduleName": "github.com/lephyrius/cdk-zeroscaler-go"
       }
     },
     "tsc": {
