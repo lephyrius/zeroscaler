@@ -104,3 +104,5 @@ jobs:
           MAVEN_VERBOSE: true
           MAVEN_DRYRUN: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
