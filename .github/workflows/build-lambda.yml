@@ -110,3 +110,4 @@ jobs:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
           GIT_USER_NAME: lephyrius
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
