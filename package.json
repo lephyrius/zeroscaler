@@ -5,7 +5,7 @@
   "homepage": "https://zeroscaler.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lephyrius/zeroscaler.git"
+    "url": "https://github.com/lephyrius/zeroscaler.git"
   },
   "version": "0.1.2",
   "main": "zeroscaler/lib/index.js",
