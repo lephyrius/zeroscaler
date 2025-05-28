@@ -78,7 +78,7 @@
       },
       "go": {
         "packageName": "zeroscaler",
-        "moduleName": "zeroscalercdk"
+        "moduleName": "lephyrius"
       }
     },
     "tsc": {
