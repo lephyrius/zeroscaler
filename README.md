@@ -1,6 +1,9 @@
 # Zeroscaler CDK TypeScript Construct Library project
 
 [![npm version](https://badge.fury.io/js/@zeroscaler%2Fzeroscaler-cdk.svg)](https://badge.fury.io/js/@zeroscaler%2Fzeroscaler-cdk)
+[![PyPI version](https://badge.fury.io/py/zeroscaler.svg)](https://badge.fury.io/py/zeroscaler)
+[![NuGet version](https://badge.fury.io/nu/ZeroScalerCDK.svg)](https://badge.fury.io/nu/ZeroScalerCDK)
+[![Go project version](https://badge.fury.io/go/github.com%2Flephyrius%2Fzeroscaler.svg)](https://badge.fury.io/go/github.com%2Flephyrius%2Fzeroscaler)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue.svg)](https://www.typescriptlang.org/)
 [![AWS CDK](https://img.shields.io/badge/AWS%20CDK-2.0+-orange.svg)](https://aws.amazon.com/cdk/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
