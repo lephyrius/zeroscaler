@@ -4,14 +4,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    commit-message: "chore: update dependencies for node packages"
+    commit-message:
+      prefix: "[npm] [zeroscaler-cdk] "
   - package-ecosystem: "cargo"
     directory: "boot-fargate"
     schedule:
       interval: "daily"
-    commit-message: "chore: update dependencies for rust packages"
+    commit-message: 
+      prefix: "[cargo] [boot-fargate] "
   - package-ecosystem: "cargo"
     directory: "boot-fargate-lambda"
     schedule:
       interval: "daily"
-    commit-message: "chore: update dependencies for rust packages"
+    commit-message:
+      prefix: "[cargo] [boot-fargate-lambda] "
