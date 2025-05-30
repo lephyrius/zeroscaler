@@ -6,6 +6,7 @@ node_modules/
 boot-fargate/target
 boot-fargate-lambda/target
 Cargo.lock
+.DS_Store
 # CDK asset staging directory
 .cdk.staging
 cdk.out
