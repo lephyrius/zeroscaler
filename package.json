@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/lephyrius/zeroscaler.git"
   },
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "zeroscaler/lib/index.js",
   "types": "zeroscaler/lib/index.d.ts",
   "keywords": [
@@ -25,7 +25,9 @@
     "lib",
     "bootstrap",
     "LICENSE",
-    "README.md"
+    "README.md",
+    ".jsii",
+    ".jsii.gz"
   ],
   "scripts": {
     "build": "jsii",

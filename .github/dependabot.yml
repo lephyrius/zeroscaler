@@ -6,15 +6,39 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "[npm] [zeroscaler-cdk] "
+    versioning-strategy: "increase-if-necessary"
+    labels:
+      - "dependencies"
+      - "npm"
+    reviewers:
+      - "lephyrius"
+    assignees:
+      - "lephyrius"
   - package-ecosystem: "cargo"
     directory: "boot-fargate"
     schedule:
       interval: "daily"
     commit-message: 
       prefix: "[cargo] [boot-fargate] "
+    versioning-strategy: "increase-if-necessary"
+    labels:
+      - "dependencies"
+      - "rust"
+    reviewers:
+      - "lephyrius"
+    assignees:
+      - "lephyrius"
   - package-ecosystem: "cargo"
     directory: "boot-fargate-lambda"
     schedule:
       interval: "daily"
     commit-message:
       prefix: "[cargo] [boot-fargate-lambda] "
+    versioning-strategy: "increase-if-necessary"
+    labels:
+      - "dependencies"
+      - "rust"
+    reviewers:
+      - "lephyrius"
+    assignees:
+      - "lephyrius"

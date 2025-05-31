@@ -12,8 +12,7 @@
 
 Construct (`Zeroscaler`) which contains and deploys a lambda that boots up your Fargate application when there is an incoming request. It also monitors
 
-The construct defines an interface (`ZeroscalerProps`) to configure the visibility timeout of the queue.
-
+The construct defines an interface (`ZeroscalerProps`) to configure the target group and Fargate task ARN, and optionally the VPC and ECS cluster.
 ## Useful commands
 
 * `npm run build`   compile typescript to js
