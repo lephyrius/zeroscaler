@@ -25,7 +25,9 @@
     "lib",
     "bootstrap",
     "LICENSE",
-    "README.md"
+    "README.md",
+    ".jsii",
+    ".jsii.gz"
   ],
   "scripts": {
     "build": "jsii",
