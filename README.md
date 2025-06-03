@@ -3,16 +3,16 @@
 [![npm version](https://badge.fury.io/js/@zeroscaler%2Fzeroscaler-cdk.svg)](https://badge.fury.io/js/@zeroscaler%2Fzeroscaler-cdk)
 [![PyPI version](https://badge.fury.io/py/zeroscaler.svg)](https://badge.fury.io/py/zeroscaler)
 [![NuGet version](https://badge.fury.io/nu/ZeroScalerCDK.svg)](https://badge.fury.io/nu/ZeroScalerCDK)
-[![Go project version](https://badge.fury.io/go/github.com%2Flephyrius%2Fzeroscaler.svg)](https://badge.fury.io/go/github.com%2Flephyrius%2Fzeroscaler)
+[![Go project version](https://badge.fury.io/go/github.com%2Flephyrius%2Fzeroscaler.svg)](https://pkg.go.dev/github.com/lephyrius/zeroscaler/zeroscaler)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue.svg)](https://www.typescriptlang.org/)
 [![AWS CDK](https://img.shields.io/badge/AWS%20CDK-2.0+-orange.svg)](https://aws.amazon.com/cdk/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
+*The Zeroscaler construct* deploys a Lambda function that automatically starts your Fargate application in response to incoming requests. It also handles health monitoring and integrates with an ELB target group.
 
-Construct (`Zeroscaler`) which contains and deploys a lambda that boots up your Fargate application when there is an incoming request. It also monitors
+You can configure the construct using the (`ZeroscalerProps`) interface, which requires a target group ARN and Fargate task ARN. Optionally, you can also specify a custom VPC and ECS cluster.
 
-The construct defines an interface (`ZeroscalerProps`) to configure the target group and Fargate task ARN, and optionally the VPC and ECS cluster.
 ## Useful commands
 
 * `npm run build`   compile typescript to js

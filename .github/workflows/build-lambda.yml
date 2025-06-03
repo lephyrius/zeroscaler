@@ -110,7 +110,6 @@ jobs:
           MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           MAVEN_SERVER_ID: central-ossrh
           MAVEN_VERBOSE: true
-          MAVEN_DRYRUN: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
