@@ -44,7 +44,7 @@
     "jest": "^30.0",
     "jsii": "^5.8",
     "jsii-pacmak": "^1",
-    "ts-jest": "^29.2",
+    "ts-jest": "^29.4",
     "typescript": "~5.8",
     "publib": "^0.2.989"
   },
