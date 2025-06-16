@@ -37,7 +37,7 @@
     "package": "jsii-pacmak"
   },
   "devDependencies": {
-    "@types/jest": "^29.5",
+    "@types/jest": "^30.0",
     "@types/node": "24.0",
     "aws-cdk-lib": "^2",
     "constructs": "^10",
