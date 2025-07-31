@@ -45,7 +45,7 @@
     "jsii": "^5.8",
     "jsii-pacmak": "^1",
     "ts-jest": "^29.4",
-    "typescript": "~5.8",
+    "typescript": "~5.9",
     "publib": "^0.2.989"
   },
   "peerDependencies": {
